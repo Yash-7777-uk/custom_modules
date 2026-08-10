@@ -51,6 +51,5 @@ async def ebook_search(_, message: Message):
 
 modules_help["ebook"] = {
     "ebook": "Search for ebooks on libgen.rs"
-    f"\n<b>Example:</b> <code>{prefix}ebook Pride and Prejudice</
-    code>",
+    f"\n<b>Example:</b> <code>{prefix}ebook Pride and Prejudice</code>",
 }
