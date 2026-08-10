@@ -42,7 +42,7 @@ async def cohere(c: Client, message: Message):
 
         response = co.chat_stream(
             chat_history=chat_history,
-            model="command-r-plus",
+            model="command-a-03-2025",
             message=prompt,
             temperature=0.8,
             tools=[{"name": "internet_search"}],
