@@ -45,8 +45,7 @@ async def cohere(c: Client, message: Message):
             model="command-a-03-2025",
             message=prompt,
             temperature=0.8,
-            tools=[{"name": "internet_search"}],
-            connectors=[],
+            connectors=[{"id": "web-search"}],
             prompt_truncation="OFF",
         )
         output = ""
@@ -67,7 +66,8 @@ async def cohere(c: Client, message: Message):
 
         db.add_chat_history(user_id, {"role": "CHATBOT", "message": output})
 
-        await message.edit_text(f"<code>{tool_message}</code>")
+        if tool_message:
+            await message.edit_text(f"<code>{tool_message}</code>")
 
         await asyncio.sleep(5)
 
