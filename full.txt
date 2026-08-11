@@ -101,6 +101,7 @@ music/spotify
 music/tiktok
 music/voice_chat
 music/yt_preview
+music/jiosavan
 news/aionews
 news/dailyepaper
 news/news
